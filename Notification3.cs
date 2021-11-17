@@ -8,9 +8,10 @@ namespace DependencyInjection
 {
     class Notification3
     {
+        public string Text { get; set; }
         public void DoNotify(IMesenger mesenger)
         {
-            mesenger.SendMessage();
+            mesenger.SendMessage(Text);
         }
     }
 }

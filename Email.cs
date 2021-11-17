@@ -8,9 +8,9 @@ namespace DependencyInjection
 {
     class Email : IMesenger
     {
-        public void SendMessage()
+        public void SendMessage(string text)
         {
-            Console.WriteLine("sending email...");
+            Console.WriteLine($"sending email: {text}");
         }
     }
 }

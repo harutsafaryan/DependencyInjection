@@ -8,6 +8,6 @@ namespace DependencyInjection
 {
     public interface IMesenger
     {
-        void SendMessage();
+        void SendMessage(string text);
     }
 }

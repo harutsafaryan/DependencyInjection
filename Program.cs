@@ -21,6 +21,7 @@ namespace DependencyInjection
             for (int i = 0; i < mesengers.Count; i++)
             {
                 Notification1 notification1 = new Notification1(mesengers[i]);
+                notification1.Text = "Constructor Injection";
                 notification1.DoNotify();
             }
 
@@ -30,6 +31,7 @@ namespace DependencyInjection
             {
                 Notification2 notification2 = new Notification2();
                 notification2.MessagaService = mesengers[i];
+                notification2.Text = "Property Injection";
                 notification2.DoNotify();
             }
 
@@ -38,6 +40,7 @@ namespace DependencyInjection
             for (int i = 0; i < mesengers.Count; i++)
             {
                 Notification3 notification3 = new Notification3();
+                notification3.Text = "Method Injection";
                 notification3.DoNotify(mesengers[i]);
             }
         }

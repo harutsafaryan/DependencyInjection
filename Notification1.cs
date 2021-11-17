@@ -9,6 +9,7 @@ namespace DependencyInjection
     class Notification1
     {
         IMesenger _mesenger;
+        public string Text { get; set; }
         public Notification1(IMesenger mesenger)
         {
             _mesenger = mesenger;
@@ -16,7 +17,7 @@ namespace DependencyInjection
 
         public void DoNotify()
         {
-            _mesenger.SendMessage();
+            _mesenger.SendMessage(Text);
         }
     }
 }

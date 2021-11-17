@@ -8,9 +8,9 @@ namespace DependencyInjection
 {
     class MMS : IMesenger
     {
-        public void SendMessage()
+        public void SendMessage(string text)
         {
-            Console.WriteLine("sending mms");
+            Console.WriteLine($"sending mms: {text}");
         }
     }
 }
